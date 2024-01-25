@@ -63,6 +63,7 @@
 }
 
 .card__proceed {
+  cursor: pointer;
   background-color: var(--color-bright-blue);
   border: 0;
   border-radius: 11px;
