@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap');
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+}
+
+.card {
+  max-width: 450px;
+  margin: 1.5em;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto;
+
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 2;
+}
+
+.card__content {
+  background-color: var(--color-white);
+  padding: 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.card__text {
+  margin: 0 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card__title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.375em;
+  font-weight: 900;
+  color: var(--color-dark-blue);
+}
+
+.card__description {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9375em;
+  font-weight: 400;
+  line-height: 166.667%;
+  color: var(--color-desaturated-blue);
+}
+
+.card__proceed {
+  background-color: var(--color-bright-blue);
+  border: 0;
+  border-radius: 11px;
+  font-size: 0.9375em;
+  font-weight: 900;
+  padding: 15px;
+  color: var(--color-white);
+  box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+}
+
+.card__cancel {
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9375em;
+  font-weight: 900;
+  color: var(--color-desaturated-blue);
+}
+
+.plan {
+  border-radius: 11px;
+  background-color: var(--color-very-pale-blue);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1.25em;
+  align-items: center;
+}
+
+.plan__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan__title {
+  margin: 0;
+  font-size: 0.875em;
+  font-weight: 900;
+  color: var(--color-dark-blue);
+}
+
+.plan__price {
+  margin: 0;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--color-desaturated-blue);
+}
+
+.plan__change {
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--color-bright-blue);
+}
+
+@media (min-width: 375px) {
+  .card__content {
+    padding: 3em;
+    gap: 2em;
+  }
+
+  .card__text {
+    font-size: 1.0625em;
+  }
+
+  .card__title {
+    font-size: 1.75em;
+  }
+
+  .card__description {
+    font-size: 1em;
+    line-height: 162.5%;
+  }
+  
+  .plan {
+    padding: 1.5em;
+  }
+
+  .plan__title, .plan__price {
+    font-size: 1em;
+  }
+
+  .plan__change {
+    font-size: 0.875em;
+  }
+}
